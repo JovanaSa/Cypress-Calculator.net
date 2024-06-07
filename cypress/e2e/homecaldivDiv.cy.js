@@ -40,7 +40,11 @@ describe('homecaldiv', () => {
         cy.get('#homefunbtn > :nth-child(2)').should('exist');
         //kolone unutar drugog reda
         cy.get('[onclick="r(\'asin\')"]').contains('sin').should('exist');
-        cy.get('[onclick="r(\'asin\')"] > sup').contains('cos').should('exist');
+        cy.get('[onclick="r(\'asin\')"] > sup').contains('-1').should('exist');
+        cy.get('[onclick="r(\'acos\')"]').contains('cos').should('exist');
+        cy.get('[onclick="r(\'acos\')"] > sup').contains('-1').should('exist');
+        cy.get('[onclick="r(\'atan\')"]').contains('tan').should('exist');
+        cy.get('[onclick="r(\'atan\')"] > sup').contains('-1').should('exist');
     });
 
 });
