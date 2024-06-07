@@ -20,7 +20,7 @@ describe('homecaldiv', () => {
         cy.get('#sciout > tbody > :nth-child(1) > td > :nth-child(1)').should('exist');
         cy.get('#sciInPut').should('exist');
         cy.get('#sciOutPut').should('exist');
-        //homefun div
+        //homefun div<pocetak
         cy.get('#homefunbtn').should('exist');
         //prvi red
         cy.get('#homefunbtn > :nth-child(1)').should('exist');
@@ -45,6 +45,31 @@ describe('homecaldiv', () => {
         cy.get('[onclick="r(\'acos\')"] > sup').contains('-1').should('exist');
         cy.get('[onclick="r(\'atan\')"]').contains('tan').should('exist');
         cy.get('[onclick="r(\'atan\')"] > sup').contains('-1').should('exist');
+        cy.get('[onclick="r(\'pi\')"]').contains('π').should('exist');
+        cy.get('[onclick="r(\'e\')"]').contains('e').should('exist');
+        //treci red
+        cy.get('#homefunbtn > :nth-child(3)').should('exist');
+        //kolone unutar treceg reda
+        cy.get('[onclick="r(\'pow\')"]').contains('x').should('exist');
+        cy.get('[onclick="r(\'pow\')"] > sup').contains('y').should('exist');
+        cy.get('[onclick="r(\'x3\')"]').contains('x').should('exist');
+        cy.get('[onclick="r(\'x3\')"] > sup').contains('3').should('exist');
+        cy.get('[onclick="r(\'x2\')"]').contains('x').should('exist');
+        cy.get('[onclick="r(\'x2\')"] > sup').contains('2').should('exist');
+        cy.get('[onclick="r(\'ex\')"]').contains('e').should('exist');
+        cy.get('[onclick="r(\'ex\')"] > sup').contains('x').should('exist');
+        cy.get('[onclick="r(\'10x\')"]').contains('10').should('exist');
+        cy.get('[onclick="r(\'10x\')"] > sup').contains('x').should('exist');
+        //cetvrti red
+        cy.get('#homefunbtn > :nth-child(4)').should('exist');
+        //kolone unutar cetvrtog reda
+
+        //homefun div>kraj
     });
+    //provera funcionalnosti buttona
+    it('Button functionallity', () => {
+        cy.get('[onclick="r(\'sin\')"]').click();
+        cy.get('#sciInPut').contains(' sin(').should('exist');
+      });
 
 });
