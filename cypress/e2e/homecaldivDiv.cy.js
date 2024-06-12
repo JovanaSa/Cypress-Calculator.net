@@ -63,7 +63,13 @@ describe('homecaldiv', () => {
         //cetvrti red
         cy.get('#homefunbtn > :nth-child(4)').should('exist');
         //kolone unutar cetvrtog reda
-
+        cy.get('[onclick="r(\'apow\')"]').contains('√x').should('exist');
+        cy.get('[onclick="r(\'apow\')"] > sup').contains('y').should('exist');
+        cy.get('[onclick="r(\'3x\')"]').contains('√x').should('exist');
+        cy.get('[onclick="r(\'3x\')"] > sup').contains('3').should('exist');
+        cy.get('[onclick="r(\'sqrt\')"]').contains('√x').should('exist');
+        cy.get('[onclick="r(\'ln\')"]').contains('ln').should('exist');
+        cy.get('[onclick="r(\'log\')"]').contains('log').should('exist');
         //homefun div>kraj
     });
     //provera funcionalnosti buttona
