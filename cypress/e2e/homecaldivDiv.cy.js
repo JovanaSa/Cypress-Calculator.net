@@ -70,7 +70,26 @@ describe('homecaldiv', () => {
         cy.get('[onclick="r(\'sqrt\')"]').contains('√x').should('exist');
         cy.get('[onclick="r(\'ln\')"]').contains('ln').should('exist');
         cy.get('[onclick="r(\'log\')"]').contains('log').should('exist');
+        //peti red
+        cy.get('#homefunbtn > :nth-child(5)').should('exist');
+        //kolone unutar petog reda
+        cy.get('[onclick="r(\'(\')"]').contains('(').should('exist');
+        cy.get('[onclick="r(\')\')"]').contains(')').should('exist');
+        cy.get('[onclick="r(\'1/x\')"]').contains('1/x').should('exist');
+        cy.get('[onclick="r(\'pc\')"]').contains('%').should('exist');
+        cy.get('[onclick="r(\'n!\')"]').contains('n!').should('exist');
         //homefun div>kraj
+        //druga tabela homecal<pocetak
+        cy.get('[style="padding-top:3px;"]').should('exist');
+        //prvi red
+        cy.get('[style="padding-top:3px;"] > :nth-child(1)');
+        //kolone unutar prvog reda
+        cy.get('[onclick="r(7)"]').contains('7').should('exist');
+        cy.get('[onclick="r(8)"]').contains('8').should('exist');
+        cy.get('[onclick="r(9)"]').contains('9').should('exist');
+        cy.get('[onclick="r(\'+\')"]').contains('+').should('exist');
+        cy.get('[onclick="r(\'bk\')"]').contains('Back').should('exist');
+        //druga tabela homecal>kraj
     });
     //provera funcionalnosti buttona
     it('Button functionallity', () => {
