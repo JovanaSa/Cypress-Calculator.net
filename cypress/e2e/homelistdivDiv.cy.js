@@ -40,5 +40,36 @@ describe('homecaldiv', () => {
         cy.get('#hl1 > :nth-child(5)').should('exist');
         //link
         cy.get('#hl1 > :nth-child(5) > a').contains('Payment Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(6)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(6) > a').contains('Retirement Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(7)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(7) > a').contains('Amortization Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(8)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(8) > a').contains('Investment Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(9)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(9) > a').contains('Inflation Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(10)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(10) > a').contains('Finance Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(11)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(11) > a').contains('Income Tax Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(12)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(12) > a').contains('Compound Interest Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(13)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(13) > a').contains('Salary Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(14)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(14) > a').contains('Interest Rate Calculator').should('exist');
+        cy.get('#hl1 > :nth-child(15)').should('exist');
+        //link
+        cy.get('#hl1 > :nth-child(15) > a').contains('Sales Tax Calculator').should('exist');
+        //drugi red
     })
 })
